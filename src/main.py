@@ -54,7 +54,6 @@ class Board:
         return False
 
     def is_winner(self, player):
-        print("macaco")
         return (
             self.check_rows(player.mark)
             or self.check_columns(player.mark)
