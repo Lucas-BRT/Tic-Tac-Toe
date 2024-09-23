@@ -153,9 +153,16 @@ class Game:
                         column = randint(0, 2)
 
                     if self.board.place_mark(row, column, player.mark):
-                        green_print(
-                            f"{player.mark} marcado na linha {row} coluna {column}"
-                        )
+                        row += 1
+                        column += 1
+                        if player.mark == "X":
+                            green_print(
+                                f"{player.mark} marcado na linha {row} coluna {column}"
+                            )
+                        else:
+                            red_print(
+                                f"{player.mark} marcado na linha {row} coluna {column}"
+                            )
                         break
                     else:
                         if player.mark == "X":
